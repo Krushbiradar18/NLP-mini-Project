@@ -1,7 +1,16 @@
 # NLP-Based Multiple Choice Question Generator
 
-## Overview
+![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
+![Streamlit](https://img.shields.io/badge/streamlit-v1.50+-red.svg)
+![License](https://img.shields.io/badge/license-Educational-green.svg)
+![NLP](https://img.shields.io/badge/NLP-NLTK%20%7C%20spaCy-orange.svg)
+
+## 🎯 Overview
 This project generates intelligent multiple choice questions (MCQs) from PDF documents using advanced Natural Language Processing (NLP) techniques combined with Google Gemini AI. The system demonstrates practical applications of various NLP concepts in an educational context.
+
+### 🚀 Live Demo
+- **Repository**: [GitHub](https://github.com/Krushbiradar18/NLP-mini-Project)
+- **Clone**: `git clone https://github.com/Krushbiradar18/NLP-mini-Project.git`
 
 ## NLP Features Implemented
 
@@ -39,24 +48,37 @@ NLP-MINI/
 └── NLP_MCQ_Generator.ipynb   # Original Jupyter notebook
 ```
 
-## Installation & Setup
+## 💻 Installation & Setup
 
 ### 1. Prerequisites
 - Python 3.8 or higher
 - Google Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
 
-### 2. Environment Setup
-The virtual environment and dependencies are already set up. To activate:
-
+### 2. Quick Setup
 ```bash
-# Navigate to project directory
-cd /Users/krushnali/Desktop/Sem-7-MINI_Projects/NLP-MINI
+# Clone the repository
+git clone https://github.com/Krushbiradar18/NLP-mini-Project.git
+cd NLP-mini-Project
 
-# Activate virtual environment
-source venv/bin/activate
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Verify installation
-python -c "import streamlit, nltk, spacy; print('All dependencies installed successfully!')"
+# Install dependencies
+pip install -r requirements.txt
+
+# Download spaCy model
+python -m spacy download en_core_web_sm
+
+# Test installation
+python test_installation.py
+```
+
+### 3. Alternative Setup (Automated)
+```bash
+# Use the setup script (macOS/Linux)
+chmod +x setup.sh
+./setup.sh
 ```
 
 ### 3. Running the Application
